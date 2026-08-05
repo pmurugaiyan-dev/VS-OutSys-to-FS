@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .slide {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        padding: 48px 56px;
+        background: #ffffff;
+        box-sizing: border-box;
+      }
+      .slide h1 {
+        font-size: 40px;
+        margin: 0 0 24px;
+        font-weight: bold;
+      }
+      .slide h2 {
+        font-size: 32px;
+        margin: 0 0 20px;
+        font-weight: bold;
+      }
+      .slide.title-slide {
+        background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      .slide.title-slide h1 {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+      .slide.section-title {
+        background: #2d5a87;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .slide ul {
+        font-size: 22px;
+        line-height: 1.7;
+        margin: 0;
+        padding-left: 24px;
+      }
+      .slide li {
+        margin-bottom: 8px;
+      }
+      .accent {
+        color: #2d5a87;
+        font-weight: bold;
+      }
+      .highlight-box {
+        background: #f0f5fa;
+        border-left: 4px solid #2d5a87;
+        padding: 16px 20px;
+        margin: 16px 0;
+        font-size: 20px;
+      }
+      .two-column {
+        display: flex;
+        gap: 32px;
+      }
+      .column {
+        flex: 1;
+      }
+      .column h3 {
+        font-size: 24px;
+        color: #2d5a87;
+        margin: 0 0 12px;
+      }
+      .column ul {
+        font-size: 18px;
+      }
+      .metric-box {
+        display: inline-block;
+        background: #2d5a87;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 8px;
+      }
+      .metric-value {
+        font-size: 32px;
+        font-weight: bold;
+      }
+      .metric-label {
+        font-size: 14px;
+        opacity: 0.9;
+      }
+      .timeline-item {
+        display: flex;
+        margin-bottom: 12px;
+        font-size: 18px;
+      }
+      .timeline-week {
+        background: #2d5a87;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-right: 16px;
+        min-width: 80px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .phase-box {
+        background: #f8f9fa;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 12px;
+      }
+      .phase-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2d5a87;
+        margin-bottom: 8px;
+      }
+      .phase-desc {
+        font-size: 16px;
+        color: #555;
+      }
+      .stack-option {
+        background: #f5f7fa;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .stack-option h3 {
+        color: #2d5a87;
+        margin: 0 0 8px;
+        font-size: 22px;
+      }
+      .stack-option ul {
+        font-size: 16px;
+        margin: 0;
+      }
+      .benefits-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .benefit-card {
+        flex: 1 1 45%;
+        background: #f0f5fa;
+        padding: 16px;
+        border-radius: 8px;
+      }
+      .benefit-card h4 {
+        color: #2d5a87;
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+      .benefit-card p {
+        font-size: 14px;
+        margin: 0;
+        color: #555;
+      }
+      .small-text {
+        font-size: 16px;
+      }
+      .footer-note {
+        position: absolute;
+        bottom: 24px;
+        font-size: 14px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Slide 1: Title -->
+    <section class="slide title-slide">
+      <h1>OutSystems to FullStack Migration</h1>
+      <p style="font-size: 24px; opacity: 0.9; margin: 0;">AI-Powered Application Modernization</p>
+      <p style="font-size: 18px; opacity: 0.7; margin-top: 32px;">Approach Document</p>
+    </section>
+
+    <!-- Slide 2: The Challenge -->
+    <section class="slide">
+      <h1>The Challenge</h1>
+      <div class="highlight-box">
+        OutSystems licensing costs continue to rise while your applications become increasingly dependent on a proprietary platform.
+      </div>
+      <ul style="margin-top: 24px;">
+        <li><span class="accent">High licensing costs</span> that scale with usage and users</li>
+        <li><span class="accent">Vendor lock-in</span> limiting technology choices and flexibility</li>
+        <li><span class="accent">Talent constraints</span> with limited OutSystems developer availability</li>
+        <li><span class="accent">Scalability concerns</span> for growing business needs</li>
+        <li><span class="accent">Integration complexity</span> with modern cloud-native architectures</li>
+      </ul>
+    </section>
+
+    <!-- Slide 3: Our Solution -->
+    <section class="slide">
+      <h1>Our Solution: AI-Accelerated Migration</h1>
+      <p style="font-size: 20px; margin-bottom: 20px;">Leverage AI to transform your OutSystems applications into maintainable, standard code:</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h4>Automated Code Generation</h4>
+          <p>AI analyzes OML metadata and generates equivalent Java/.NET code with business logic intact</p>
+        </div>
+        <div class="benefit-card">
+          <h4>Pattern Recognition</h4>
+          <p>Intelligent mapping of OutSystems patterns to industry-standard frameworks</p>
+        </div>
+        <div class="benefit-card">
+          <h4>Accelerated Timeline</h4>
+          <p>60-70% faster than manual rewrite with consistent quality output</p>
+        </div>
+        <div class="benefit-card">
+          <h4>Risk Mitigation</h4>
+          <p>Incremental migration with parallel running and validation at each phase</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Target Stack Options -->
+    <section class="slide">
+      <h1>Target Stack Options</h1>
+      <div class="two-column">
+        <div class="column">
+          <div class="stack-option">
+            <h3>Java Stack</h3>
+            <ul>
+              <li>Spring Boot backend</li>
+              <li>React or Angular frontend</li>
+              <li>PostgreSQL / MySQL database</li>
+              <li>REST/GraphQL APIs</li>
+              <li>Docker + Kubernetes deployment</li>
+            </ul>
+          </div>
+          <p class="small-text" style="color: #666; margin-top: 8px;">Best for: Organizations with Java expertise or cloud-native focus</p>
+        </div>
+        <div class="column">
+          <div class="stack-option">
+            <h3>.NET Stack</h3>
+            <ul>
+              <li>ASP.NET Core backend</li>
+              <li>Blazor or React frontend</li>
+              <li>SQL Server / PostgreSQL database</li>
+              <li>REST/GraphQL APIs</li>
+              <li>Azure / AWS deployment</li>
+            </ul>
+          </div>
+          <p class="small-text" style="color: #666; margin-top: 8px;">Best for: Microsoft ecosystem organizations or existing .NET teams</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Migration Approach -->
+    <section class="slide">
+      <h1>Migration Approach</h1>
+      <div class="phase-box">
+        <div class="phase-title">Phase 1: Discovery & Analysis</div>
+        <div class="phase-desc">Extract and analyze OML files, map data models, identify dependencies, assess complexity</div>
+      </div>
+      <div class="phase-box">
+        <div class="phase-title">Phase 2: Architecture Design</div>
+        <div class="phase-desc">Design target architecture, define API contracts, plan database migration strategy</div>
+      </div>
+      <div class="phase-box">
+        <div class="phase-title">Phase 3: AI-Assisted Code Generation</div>
+        <div class="phase-desc">Generate backend services, frontend components, and database schemas using AI tooling</div>
+      </div>
+      <div class="phase-box">
+        <div class="phase-title">Phase 4: Validation & Refinement</div>
+        <div class="phase-desc">Test, validate business logic, performance tuning, security review, UAT</div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Cost Benefits -->
+    <section class="slide">
+      <h1>Cost Reduction Benefits</h1>
+      <div style="text-align: center; margin: 16px 0;">
+        <div class="metric-box">
+          <div class="metric-value">60-80%</div>
+          <div class="metric-label">Licensing Cost Reduction</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-value">3-5x</div>
+          <div class="metric-label">Larger Talent Pool</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-value">100%</div>
+          <div class="metric-label">Code Ownership</div>
+        </div>
+      </div>
+      <ul style="margin-top: 24px;">
+        <li><span class="accent">Eliminate recurring platform fees</span> (typically $50K-$500K+ annually)</li>
+        <li><span class="accent">Reduce operational costs</span> with standard cloud infrastructure</li>
+        <li><span class="accent">Hire from wider talent pool</span> of Java/.NET developers</li>
+        <li><span class="accent">Flexible scaling</span> without per-user licensing constraints</li>
+      </ul>
+    </section>
+
+    <!-- Slide 7: POC Scope -->
+    <section class="slide">
+      <h1>Proof of Concept Scope</h1>
+      <p style="font-size: 20px; margin-bottom: 16px;">We recommend starting with a focused POC to validate the approach:</p>
+      <div class="two-column">
+        <div class="column">
+          <h3>Included in POC</h3>
+          <ul>
+            <li>1 representative application module</li>
+            <li>5-10 core entities/data models</li>
+            <li>Key business workflows (3-5)</li>
+            <li>User authentication flow</li>
+            <li>Sample integrations (1-2 APIs)</li>
+            <li>Functional demonstration</li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>POC Deliverables</h3>
+          <ul>
+            <li>Working application in target stack</li>
+            <li>Migration assessment report</li>
+            <li>Full migration roadmap</li>
+            <li>Effort estimation for complete migration</li>
+            <li>Risk analysis document</li>
+            <li>ROI projection</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 8: POC Timeline -->
+    <section class="slide">
+      <h1>POC Timeline: 4-6 Weeks</h1>
+      <div class="timeline-item">
+        <div class="timeline-week">Week 1</div>
+        <div><strong>Discovery:</strong> Extract OML, analyze application structure, document current state</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-week">Week 2</div>
+        <div><strong>Design:</strong> Define target architecture, map data models, plan migration approach</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-week">Week 3-4</div>
+        <div><strong>Development:</strong> AI-assisted code generation, backend + frontend implementation</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-week">Week 5</div>
+        <div><strong>Testing:</strong> Functional validation, data migration verification, performance baseline</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-week">Week 6</div>
+        <div><strong>Delivery:</strong> Demo, documentation, full migration roadmap presentation</div>
+      </div>
+      <div class="highlight-box" style="margin-top: 16px;">
+        <strong>POC Investment:</strong> Typically 4-6 weeks, team of 2-3 engineers. Exact scope tailored to your application complexity.
+      </div>
+    </section>
+
+    <!-- Slide 9: Why Partner With Us -->
+    <section class="slide">
+      <h1>Why Partner With Us</h1>
+      <ul>
+        <li><span class="accent">Proven AI-assisted migration methodology</span> refined across multiple engagements</li>
+        <li><span class="accent">Deep OutSystems expertise</span> understanding OML internals and platform patterns</li>
+        <li><span class="accent">Full-stack development capability</span> in both Java and .NET ecosystems</li>
+        <li><span class="accent">Risk-managed approach</span> with incremental delivery and validation gates</li>
+        <li><span class="accent">Knowledge transfer</span> ensuring your team can maintain the migrated applications</li>
+        <li><span class="accent">Post-migration support</span> available for production stabilization</li>
+      </ul>
+    </section>
+
+    <!-- Slide 10: Next Steps -->
+    <section class="slide">
+      <h1>Next Steps</h1>
+      <div style="font-size: 22px; line-height: 2;">
+        <p><strong>1.</strong> Share your OutSystems application portfolio overview</p>
+        <p><strong>2.</strong> Joint discovery call to assess complexity and priorities</p>
+        <p><strong>3.</strong> Select a pilot application for POC</p>
+        <p><strong>4.</strong> Agree on target stack and timeline</p>
+        <p><strong>5.</strong> Kick off the POC engagement</p>
+      </div>
+      <div class="highlight-box" style="margin-top: 24px;">
+        <strong>Ready to start?</strong> Let's schedule a discovery session to understand your applications and define the right POC scope for your organization.
+      </div>
+    </section>
+
+    <!-- Slide 11: Thank You -->
+    <section class="slide title-slide">
+      <h1>Thank You</h1>
+      <p style="font-size: 22px; opacity: 0.9; margin: 16px 0;">Let's modernize your applications together</p>
+      <p style="font-size: 18px; opacity: 0.7; margin-top: 24px;">Questions?</p>
+    </section>
+  </body>
+</html>

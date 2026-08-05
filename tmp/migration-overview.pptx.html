@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .slide {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1a1a1a;
+        padding: 40px 50px;
+        background: #ffffff;
+      }
+      .slide h1 {
+        font-size: 36px;
+        margin: 0 0 20px;
+        color: #0b5cff;
+        border-bottom: 3px solid #0b5cff;
+        padding-bottom: 10px;
+      }
+      .org-chart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .orchestrator {
+        background: #0b5cff;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        width: 420px;
+      }
+      .orchestrator-sub {
+        font-size: 11px;
+        font-weight: normal;
+        opacity: 0.9;
+      }
+      .connector-down {
+        width: 2px;
+        height: 15px;
+        background: #666;
+      }
+      .connector-horizontal {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0;
+      }
+      .connector-line {
+        width: 280px;
+        height: 2px;
+        background: #666;
+        margin-top: 0;
+      }
+      .branch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .branch-connector {
+        width: 2px;
+        height: 15px;
+        background: #666;
+      }
+      .agent-groups {
+        display: flex;
+        gap: 40px;
+        margin-top: 0;
+      }
+      .agent-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .group-box {
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 13px;
+        text-align: center;
+        min-width: 120px;
+      }
+      .extraction { background: #e8f5e9; color: #2e7d32; border: 2px solid #2e7d32; }
+      .generation { background: #fff3e0; color: #e65100; border: 2px solid #e65100; }
+      .validation { background: #fce4ec; color: #c2185b; border: 2px solid #c2185b; }
+      .sub-agents {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .sub-agent {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        padding: 6px 10px;
+        border-radius: 4px;
+        font-size: 11px;
+        text-align: center;
+      }
+      /* Slide 2 - Component Mapping */
+      .mapping-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      .mapping-table th {
+        background: #0b5cff;
+        color: white;
+        padding: 10px 12px;
+        text-align: left;
+        font-size: 14px;
+      }
+      .mapping-table td {
+        padding: 8px 12px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .mapping-table tr:nth-child(even) {
+        background: #f8f9fa;
+      }
+      .category {
+        background: #e3f2fd !important;
+        font-weight: bold;
+        color: #1565c0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Slide 1: Agent Architecture -->
+    <section class="slide">
+      <h1>Agent Architecture Overview</h1>
+      <div class="org-chart">
+        <div class="orchestrator">
+          ORCHESTRATOR AGENT
+          <div class="orchestrator-sub">Workflow Control | State Management | Agent Coordination</div>
+        </div>
+        <div class="connector-down"></div>
+        <div class="connector-horizontal">
+          <div class="connector-line"></div>
+        </div>
+        <div class="agent-groups">
+          <div class="agent-group">
+            <div class="branch">
+              <div class="branch-connector"></div>
+              <div class="group-box extraction">EXTRACTION AGENTS</div>
+            </div>
+            <div class="sub-agents">
+              <div class="sub-agent">Parser<br/>Agent</div>
+              <div class="sub-agent">Analyzer<br/>Agent</div>
+            </div>
+          </div>
+          <div class="agent-group">
+            <div class="branch">
+              <div class="branch-connector"></div>
+              <div class="group-box generation">GENERATION AGENTS</div>
+            </div>
+            <div class="sub-agents">
+              <div class="sub-agent">Entity<br/>Agent</div>
+              <div class="sub-agent">Logic<br/>Agent</div>
+              <div class="sub-agent">UI<br/>Agent</div>
+            </div>
+          </div>
+          <div class="agent-group">
+            <div class="branch">
+              <div class="branch-connector"></div>
+              <div class="group-box validation">VALIDATION AGENTS</div>
+            </div>
+            <div class="sub-agents">
+              <div class="sub-agent">Compile<br/>Agent</div>
+              <div class="sub-agent">Test<br/>Agent</div>
+              <div class="sub-agent">Review<br/>Agent</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 2: Component Mapping -->
+    <section class="slide">
+      <h1>OutSystems to .NET Component Mapping</h1>
+      <table class="mapping-table">
+        <tr>
+          <th style="width:35%">OutSystems Component</th>
+          <th style="width:65%">.NET Stack Equivalent</th>
+        </tr>
+        <tr class="category"><td colspan="2">Data Layer</td></tr>
+        <tr><td>Entity / Attributes</td><td>Entity Framework Core Model with [Column] attributes</td></tr>
+        <tr><td>Aggregate (Query)</td><td>LINQ queries / DbSet methods</td></tr>
+        <tr class="category"><td colspan="2">Business Logic</td></tr>
+        <tr><td>Server Action</td><td>Service class method</td></tr>
+        <tr><td>Service Action (API)</td><td>[ApiController] endpoint</td></tr>
+        <tr><td>Timer (Scheduled)</td><td>Hangfire / IHostedService</td></tr>
+        <tr class="category"><td colspan="2">User Interface</td></tr>
+        <tr><td>Screen (Reactive)</td><td>React / Blazor component</td></tr>
+        <tr><td>Block (Reusable)</td><td>Partial view / component</td></tr>
+        <tr class="category"><td colspan="2">Integration & Security</td></tr>
+        <tr><td>REST API (Consume/Expose)</td><td>HttpClient / [ApiController]</td></tr>
+        <tr><td>User / Role / Login</td><td>ASP.NET Identity with [Authorize]</td></tr>
+      </table>
+    </section>
+  </body>
+</html>
